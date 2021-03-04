@@ -1,0 +1,20 @@
+<!-- <p>input</p> -->
+<div class="container">
+    <h2>User Input for Online Ticket Teservation</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input  class="form-control" type="text" ng-model="name" placeholder="Enter Name" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile No:</label>
+        <input  class="form-control" type="text" ng-model="mobile" placeholder="Enter Mobile No" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input  class="form-control" type="text" ng-model="email" placeholder="Enter Email Id" required>
+      </div>
+      
+      <button ng-click="ticket()" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

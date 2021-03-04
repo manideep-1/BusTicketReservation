@@ -1,0 +1,98 @@
+<!-- <p>Online reservation ticket</p> -->
+<!-- <p>{{desiredLocation}}</p> -->
+
+  <div class="card text-white bg-primary" style="padding:30px">
+    <div class="card-header text-center"><h3>Online reservation ticket</h3></div>
+    <div class="card-body">
+    <h4 class="card-title">{{desiredLocation.fromto.from}} to {{desiredLocation.fromto.to}} on {{desiredLocation.fromto.date | date :  "dd.MM.y"}}</h4>
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">Seats</th>
+          <th scope="col">Fare</th>
+        </tr>
+      </thead>
+      <tbody >   
+          <tr ng-repeat="(k,v) in desiredLocation.select">
+            <td scope="col"ng-if="v==1">{{ k }}</td>
+            <td scope="col"ng-if="v==1">1000</td>
+          </tr>
+        </tbody>
+    </table>
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">Passenger Name:</th>
+          <th scope="col">Ticket Id</th>
+          <th scope="col">From:</th>
+          <th scope="col">To:</th>
+        </tr>
+      </thead>
+      <tbody >   
+          <tr >
+            <td scope="col">manideep</td>
+            <td scope="col">-MUr80p78RTYKUBXAGCI</td>
+            <td scope="col">{{desiredLocation.fromto.from}}</td>
+            <td scope="col">{{desiredLocation.fromto.to}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">Bus Name:</th>
+          <th scope="col">Reporting Time:</th>
+          <th scope="col">Departing Time:</th>
+        </tr>
+      </thead>
+      <tbody >   
+          <tr >
+            <td scope="col">Red Line</td>
+            <td scope="col">Before 30 Min</td>
+            <td scope="col">10:00PM</td>
+          </tr>
+        </tbody>
+    </table>
+    <h3>Total Fare:{{desiredLocation.fare}}</h3>
+    <p class="card-text ">** Please Bring this copy to ticket counter for collect your ticket</p>
+    </div>
+    </div>
+    <!-- <div class="card-columns">
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Content 1 </p>
+      </div>
+      </div>
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Content 2 </p>
+      </div>
+      </div>
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Content 3. (Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.)  </p>
+      </div>
+      </div>
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Content 4 </p>
+      </div>
+      </div> 
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Content 5 </p>
+      </div>
+      </div>
+      </div>       
+      <div class="card-group">
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class="card-text"> Group Data 1 </p>
+      </div>
+      </div>
+      <div class="card bg-light">
+      <div class="card-body text-center">
+      <p class ="card-text"> Group Data 2 </p>
+      </div>
+      </div>
+      </div> -->

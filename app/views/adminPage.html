@@ -1,0 +1,81 @@
+<h3>admin page</h3>
+<button data-toggle="modal" data-target="#tickets" class="btn btn-primary">Add</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Bus Name</th>
+        <th>Dept Time</th>
+        <th>Coach Type</th>
+        <th>Seats Available</th>
+        <th>Fare of each ticket</th>
+        <th>Total Fair</th>
+        <!-- <th>Edit</th> -->
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr ng-repeat="x in registrations">
+        <td>{{x.name}}</td>
+        <td>{{ x.busname }}</td>
+        <td>{{ x.depttime }}</td>
+        <td>{{ x.coachtype }}</td>
+        <td>{{ x.noofseats }}</td>
+        <td>{{ x.fare }}</td>
+        <td>{{x.fare*x.noofseats}}</td>
+        <!-- <td><button data-toggle="modal" data-target="#tickets" class="btn btn-primary">Edit</button></td> -->
+        <td><button  class="btn btn-primary" ng-click="Remove($index)" value="Remove">Delete</button></td>
+        <!-- <td><button class="md-primary md-raised" ng-click="showPrompt($event)"  >
+            Prompt Dialog
+          </button></td> -->
+      </tr>
+      
+    </tbody>
+  </table>
+  <div class="modal fade" id="tickets" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ticketsTitle">
+              Fill details
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+            <form>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" ng-model="name" placeholder="Enter Name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="busname">Bus Name:</label>
+                <input type="text" class="form-control" id="busname"ng-model="busname" placeholder="Enter Bus Name" name="busname">
+              </div>
+              <div class="form-group">
+                <label for="depttime">Dept time:</label>
+                <input type="text" class="form-control" id="depttime" ng-model="depttime"  placeholder="Enter Dept time" name="depttime">
+              </div>
+              <div class="form-group">
+                <label for="coachtype">Coach Type:</label>
+                <input type="text" class="form-control" id="coachtype" ng-model="coachtype" placeholder="Enter Couch Type" name="coachtype">
+              </div>
+              <div class="form-group">
+                <label for="noofseats">No of Seats:</label>
+                <input type="text" class="form-control" id="noofseats" ng-model="noofseats" placeholder="Enter No of seats" name="noofseats">
+              </div>
+              <div class="form-group">
+                <label for="fare">Fare:</label>
+                <input type="text" class="form-control" id="fare" ng-model="fare" placeholder="Enter Fare" name="fare">
+              </div>             
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="save1()" data-dismiss="modal" >Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,20 @@
+<p>Payment</p>
+<p>{{desiredLocation}}</p>
+<table class="table table-hover ml-0 pl-0">
+    <thead>
+      <tr>
+        <th scope="col">Seats</th>
+        <th scope="col">Fare</th>
+      </tr>
+    </thead>
+    <tbody >
+
+        <tr ng-repeat="(k,v) in desiredLocation">
+          <td scope="col"ng-if="v==1">{{ k }}</td>
+          <td scope="col"ng-if="v==1">1000</td>
+         
+        </tr>
+        
+        
+      </tbody>
+  </table>

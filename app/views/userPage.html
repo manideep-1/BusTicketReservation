@@ -1,0 +1,29 @@
+
+<div class="container">
+    <form>
+      <div class="form-group" ng-init="from='Hyderabad';to='Khammam'">
+        <label for="sel1">Leaving from:</label>
+        <select class="form-control" ng-model="from" id="sel1">
+          <option>Hyderabad</option>
+          <option>Khammam</option>
+          <option>vizak</option>
+          <option>Goa</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel1">Going to:</label>
+        <select class="form-control" ng-model="to" id="sel2">
+          <option>Hyderabad</option>
+          <option>Khammam</option>
+          <option>vizak</option>
+          <option>Goa</option>
+        </select>
+        
+      </div>
+      <div class="form-group">
+        <label for="sel1">Departing On:</label>
+       <input class="form-control" type="date" id="date" ng-model="date" name="date">
+      </div>
+      <button ng-click="searchBuses()" class="btn btn-primary">Search Buses</button>
+    </form>
+  </div>

@@ -1,0 +1,168 @@
+<!-- <p>bus details</p> -->
+
+<!-- <span class="py-3 "><strong>
+    Dhaka - Comilla on March 2nd, 2021
+</strong></span> -->
+
+<h3>{{desiredLocation.from}} to {{desiredLocation.to}} on {{desiredLocation.date | date :  "dd.MM.y"}}</h3>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Bus Name</th>
+        <th>Dept Time</th>
+        <th>Coach Type</th>
+        <th>Seats Available</th>
+        <th>Fare</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr ng-repeat="x in busdetails1">
+        <td>{{ x.busname }}</td>
+        <td>{{ x.depttime }}</td>
+        <td>{{ x.coachtype }}</td>
+        <td>{{ x.noofseats }}</td>
+        <td>{{ x.fare }}</td>
+        <td><button data-toggle="modal" data-target="#tickets" class="btn btn-primary">View Seats</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <!-- add fade to model -->
+  <div class="modal" id="tickets" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="ticketsTitle">
+              Select Seats
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+          <!-- <p>{{from}} to {{to}}</p> -->
+        <div class="d-flex flex-column justify-content-start px-3 " style="height: 500px;">
+            <div class="row text-center d-flex flex-row justify-content-center py-3 mt-3" style="height: 15%;">
+                <span class=" mx-3 fas fa-chair text-muted" id="a1" ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="a2" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class=" mx-3 fas fa-chair text-muted" id="a3" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="a4" ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+            </div>
+            <div class="row text-center d-flex flex-row justify-content-center py-3 " style="height: 15%;">
+                <span class=" mx-3 fas fa-chair text-muted" id="b1"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="b2"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class=" mx-3 fas fa-chair text-muted" id="b3"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="b3"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+            </div>
+            <div class="row text-center d-flex flex-row justify-content-center py-3 " style="height: 15%;">
+                <span class=" mx-3 fas fa-chair text-muted" id="c1"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="c2" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class=" mx-3 fas fa-chair text-muted" id="c3" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="c4" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+            </div>
+            <div class="row text-center d-flex flex-row justify-content-center py-3 " style="height: 15%;">
+                <span class=" mx-3 fas fa-chair text-muted" id="d1" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="d2" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class=" mx-3 fas fa-chair text-muted" id="d3" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="d4" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+            </div>
+            <div class="row text-center d-flex flex-row justify-content-center py-3 " style="height: 15%;">
+                <span class=" mx-3 fas fa-chair text-muted" id="e1" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="e2"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class=" mx-3 fas fa-chair text-muted" id="e3"ng-click="details($event)" onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+                <span class=" mx-3 fas fa-chair text-muted" id="e4" ng-click="details($event)"onclick="
+                if(this.style.color != 'rgb(2, 117, 216)'){ this.style.color = 'rgb(2, 117, 216)';} 
+                else {this.style.color='#808080';}
+                "style="font-size:30px;"></span>
+            </div>
+            <table class="table table-hover ml-0 pl-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Seats</th>
+                    <th scope="col">Fare</th>
+                  </tr>
+                </thead>
+                <tbody >
+      
+                    <tr ng-repeat="(k,v) in select">
+                      <td scope="col"ng-if="v==1">{{ k }}</td>
+                      <td scope="col"ng-if="v==1">1000</td>
+                     
+                    </tr>
+                  </tbody>
+              </table>
+              
+              <div class="modal-footer">
+                <h3>Total:{{fare}}</h3>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary " data-dismiss="modal" ng-click="confirm()" >Confirm</button>
+              </div>      
+        </div>
+        
+      </div>
+    </div>
+  </div>
